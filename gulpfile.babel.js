@@ -8,7 +8,6 @@ gulp.task('default', function(cb) {
 	gulp.series(
 		'clean',
 		gulp.parallel(
-			'styles:vendors',
 			'styles:theme',
 			'pug',
 			'scripts',
@@ -24,7 +23,6 @@ gulp.task('dev', function(cb) {
 	gulp.series(
 		'clean',
 		gulp.series(
-			'styles:vendors',
 			'styles:theme',
 			'pug',
 			'scripts',

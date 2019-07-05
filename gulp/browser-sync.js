@@ -13,7 +13,7 @@ gulp.task("browser-sync", () => {
 
     gulp.watch(path.pug.watch, gulp.parallel("pug"));
     gulp.watch(path.styles.theme.watch, gulp.parallel("styles:theme"));
-    gulp.watch(path.styles.vendors.watch, gulp.parallel("styles:vendors"));
+    //gulp.watch(path.styles.vendors.watch, gulp.parallel("styles:vendors"));
     gulp.watch(path.scripts.watch, gulp.parallel("scripts"));
     gulp.watch(path.sprites.watch, gulp.parallel("sprites"));
     gulp.watch(path.images.watch, gulp.parallel("images"));
