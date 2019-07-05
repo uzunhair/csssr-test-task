@@ -8,6 +8,16 @@ block head
 block header
 
 block content
+	.container
+		.page-title
+			+img('headline.png', 'page-title-img')
+		form
+			.form-group
+				label.label(for="full-name") Полное ФИО
+				input.form-control#full-name(type="text", value="Иванов Иван Иванович")
+			.form-group
+				label.label(for="birth-year") Год рождения
+				input.form-control#birth-year(type="text", value="1990")
 
 block footer
 
