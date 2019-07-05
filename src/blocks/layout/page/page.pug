@@ -1,0 +1,22 @@
+doctype html
+
+include ../../components/img/img
+
+block variables
+
+html(lang="ru-RU")
+	head
+		include ../head/head
+		block head
+	body
+		.main-wrap
+			include ../header/header
+
+			main
+				block content
+
+		script(src="js/jquery.min.js")
+		script(src="js/app.js")
+		script(src="js/holder.js")
+
+

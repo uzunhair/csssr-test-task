@@ -7,7 +7,10 @@ const path = {
 			"!src/pug/_example.pug",
 		],
 		dist: "dist",
-		watch: "src/pug/**/*.*"
+		watch: [
+			"src/pug/**/*.pug",
+			"src/blocks/**/*.pug"
+		]
 	},
 	scripts: {
 		seperate: {
@@ -30,8 +33,6 @@ const path = {
 				"src/js/concat/bootstrap/tab.js",
 				"src/js/concat/bootstrap/tooltip.js",
 				"src/js/concat/bootstrap/popover.js",
-				//"node_modules/owl.carousel/dist/owl.carousel.js",
-				//"node_modules/jquery.dotdotdot/dist/jquery.dotdotdot.js",
 				"src/js/concat/*.js",
 				"src/js/setting.js"
 			],
