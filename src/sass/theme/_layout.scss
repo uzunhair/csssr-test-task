@@ -1,22 +1,22 @@
 .main-wrap {
-    max-width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    background: url("../img/body-bg.png") repeat top center;
-    height: 100%;
-    font-size: 15px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  background: url("../img/body-bg.png") repeat top center;
+  height: 100%;
+  font-size: 15px;
 }
 
 .header {
-    padding-top: 62px;
-    padding-bottom: 40px;
-    &-body {
-        display: flex;
-        position: relative;
-    }
-    &-print {
-        position: absolute;
-        right: -62px;
-        top: -22px;
-    }
+  padding-top: 62px;
+  padding-bottom: 40px;
+  &-body {
+    display: flex;
+    position: relative;
+  }
+  &-print {
+    position: absolute;
+    top: -22px;
+    right: -62px;
+  }
 }

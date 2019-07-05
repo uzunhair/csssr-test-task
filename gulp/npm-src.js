@@ -7,14 +7,17 @@ import debug from "gulp-debug";
 // Таск запускается на старте проекта
 
 const vendorList = {
-	bootstrap: {
-		'./node_modules/bootstrap/js/dist/*.js': './src/js/concat/bootstrap',
-		'./node_modules/bootstrap/scss/**': './src/sass/vendors/bootstrap'
-	},
-	fontAwesome: {
-		'./node_modules/font-awesome/fonts/*.*': './src/fonts/',
-		'./node_modules/font-awesome/scss/*.*': './src/sass/vendors/font-awesome/'
+	normalize: {
+		'./node_modules/node.normalize.scss/_normalize.scss': './src/sass/vendors/normalize'
 	}
+	// bootstrap: {
+	// 	'./node_modules/bootstrap/js/dist/*.js': './src/js/concat/bootstrap',
+	// 	'./node_modules/bootstrap/scss/**': './src/sass/vendors/bootstrap'
+	// },
+	// fontAwesome: {
+	// 	'./node_modules/font-awesome/fonts/*.*': './src/fonts/',
+	// 	'./node_modules/font-awesome/scss/*.*': './src/sass/vendors/font-awesome/'
+	// }
 };
 
 gulp.task('npm:copy', function (cb) {

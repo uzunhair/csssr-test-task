@@ -1,0 +1,8 @@
+src/sass/vendors/bootstrap/*.scss
+src/sass/vendors/bootstrap/mixins/*.scss
+src/sass/vendors/bootstrap/utilities/*.scss
+src/sass/vendors/bootstrap/vendor/*.scss
+src/sass/vendors/bootstrap/*.scss
+src/sass/vendors/normalize/_normalize.scss
+src/sass/theme/_typografy.scss
+src/sass/sprite/_svg_sprite_template.scss

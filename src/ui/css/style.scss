@@ -28,8 +28,8 @@ body {
   }
   &-dropdown-menu {
     .dropdown-menu {
-      position: static;
       display: block;
+      position: static;
     }
   }
 }
@@ -64,12 +64,12 @@ ul.sub-menu li > a.active {
   color: #83b46d;
 }
 .section--title {
-  margin: 0 ;
+  margin: 0;
   padding-bottom: 10px;
   border-bottom: 1px solid #ededed;
 }
 pre[class*="language-"] {
-  margin: 0 ;
-  border-top-left-radius:0;
-  border-top-right-radius:0;
+  margin: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
