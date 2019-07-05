@@ -5,7 +5,7 @@ const path = {
 		src: [
 			"src/pug/*.pug",
 			"!src/pug/_example.pug",
-			],
+		],
 		dist: "dist",
 		watch: "src/pug/**/*.*"
 	},
@@ -45,6 +45,7 @@ const path = {
 			watch: [
 				"src/sass/theme.scss",
 				"src/sass/theme/**/*.scss",
+				"src/blocks/**/*.scss",
 				"src/sass/config/*.scss"
 			],
 		},
@@ -94,4 +95,4 @@ const path = {
 	}
 };
 
-export { path }
+export {path}

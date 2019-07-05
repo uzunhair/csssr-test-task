@@ -12,16 +12,21 @@
     "production": "gulp production --production",
     "zip": "gulp zip",
     "lint:style": "stylelint \"src/**/*.scss\" --syntax=scss",
-    "lint:style --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix"
+    "lint:style --fix": "stylelint \"src/**/*.scss\" --syntax=scss --fix",
+    "bem:block": "bem create my-block"
   },
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/register": "^7.4.4",
+    "babel-eslint": "^10.0.2",
+    "bem-tools-core": "0.0.3",
+    "bem-tools-create": "^2.3.0",
     "browser-sync": "latest",
     "css-mqpacker": "latest",
     "del": "latest",
+    "eslint": "^6.0.1",
     "gulp": "latest",
     "gulp-autoprefixer": "latest",
     "gulp-changed": "latest",
@@ -74,7 +79,6 @@
     "holderjs": "latest",
     "jquery": "latest",
     "minimatch": "latest",
-    "owl.carousel": "latest",
     "popper.js": "latest",
     "theia-sticky-sidebar": "latest"
   },
