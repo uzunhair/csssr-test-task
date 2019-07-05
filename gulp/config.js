@@ -21,18 +21,6 @@ const path = {
 		},
 		concat: {
 			src: [
-				"node_modules/popper.js/dist/umd/popper.min.js",
-				"src/js/concat/bootstrap/util.js",
-				"src/js/concat/bootstrap/alert.js",
-				"src/js/concat/bootstrap/button.js",
-				"src/js/concat/bootstrap/carousel.js",
-				"src/js/concat/bootstrap/collapse.js",
-				"src/js/concat/bootstrap/dropdown.js",
-				"src/js/concat/bootstrap/modal.js",
-				"src/js/concat/bootstrap/scrollspy.js",
-				"src/js/concat/bootstrap/tab.js",
-				"src/js/concat/bootstrap/tooltip.js",
-				"src/js/concat/bootstrap/popover.js",
 				"src/js/concat/*.js",
 				"src/js/setting.js"
 			],
