@@ -1,3 +1,4 @@
+src/sass/theme/_reboot.scss
 src/sass/vendors/bootstrap/*.scss
 src/sass/vendors/bootstrap/mixins/*.scss
 src/sass/vendors/bootstrap/utilities/*.scss

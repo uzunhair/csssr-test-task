@@ -1,0 +1,74 @@
+// Config
+
+// Colors
+
+$gray-700: #797979;
+$gray-300: #3d3d3d;
+$gray-200: #2f1b15;
+
+$blue: #1f5f97;
+
+
+// Body
+
+$body-background: $gray-700;
+$body-color: $gray-300;
+
+// Links
+
+$link-color:  $blue;
+$link-decoration: underline !default;
+$link-hover-color:  darken($link-color, 15%) !default;
+$link-hover-decoration: none !default;
+
+
+// Font, line-heigh
+
+$font-family-base: "PT Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: Consolas, "Courier New", monospace;
+$font-size-base: 16px;
+$font-weight-base: 400;
+$font-weight-bold: 700;
+$font-weight-bolder:  bolder;
+
+$line-height-base:  1.5;
+
+// Grid columns
+
+$grid-gutter-width: 30px;
+
+// Grid breakpoints
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+
+// Components
+
+$border-width:                1px;
+
+// Form
+$label-margin-bottom:                   .5rem !default;
+
+$input-padding-y: .25rem;
+$input-padding-x: 1rem;
+
+$input-line-height: 1.2;
+$input-color: #231f20;
+$input-focus-color: lighten($input-color, 4%);
+
+$input-background: transparent;
+$input-focus-background: transparent;
+$input-disabled-background: transparent;
+
+$input-border-width: $border-width;
+$input-height-border: $input-border-width * 2;
+$input-height:  calc(#{$input-line-height * 1em} + #{$input-padding-y * 2} + #{$input-height-border});

@@ -9,12 +9,52 @@ block header
 
 block content
 	.container
-		.page-title
+		.page__title
 			+img('headline.png', 'page-title-img')
 		form
-			.form-group
-				label.label(for="full-name") Полное ФИО
-				input.form-control#full-name(type="text", value="Иванов Иван Иванович")
-			.form-group
-				label.label(for="birth-year") Год рождения
-				input.form-control#birth-year(type="text", value="1990")
+			fieldset.form__fieldset_personal-data
+				.form__inline
+					label.form__label.form__inline_label(for="form__full-name") Полное ФИО
+					input.form__control.form__inline_control#form__full-name(type="text", value="Иванов Иван Иванович")
+
+				.form__inline
+					label.form__label.form__inline_label(for="form__birth-year") Год рождения
+					input.form__control.form__inline_control#form__birth-year(type="text", value="1990")
+
+				.form__inline
+					label.form__label.form__inline_label(for="form__birth-year") Место жительства
+					input.form__control.form__inline_control#form__birth-year(type="text", value="г. Иваново, Россия")
+
+				.form__inline
+					label.form__label.form__inline_label(for="form__birth-year") Скайп
+					input.form__control.form__inline_control#form__birth-year(type="text", value="ivanov")
+
+				.form__inline
+					label.form__label.form__inline_label(for="form__birth-year") Почта
+					input.form__control.form__inline_control#form__birth-year(type="text", value="ivanov@gmail.com")
+
+
+			fieldset.form__fieldset_personal-data
+				legend.form__legend Расскажите о себе чекбоксами
+				p.form__text Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
+
+				ul.form__list
+					-var n = 0
+					each skillItem, index in skill
+						li.form__list_item
+							each item, index in skillItem
+								.form__checkbox
+									if item.checked
+										input.form__checkbox_input(type="checkbox" id="form__checkbox_"+n, checked)
+									else
+										input.form__checkbox_input(type="checkbox" id="form__checkbox_"+n)
+									label.form__label.form__checkbox_label(for="form__checkbox_"+n++)=item.title
+										|
+										|
+										if item.linkUrl
+											if item.linkText
+												a(href=item.linkUrl)=item.linkText
+											else
+												a(href=item.linkUrl)=item.linkUrl
+										if item.subtitle
+											span.form__sub=item.subtitle

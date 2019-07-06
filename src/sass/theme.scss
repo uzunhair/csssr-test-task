@@ -1,15 +1,12 @@
-@import "vendors/bootstrap/functions";
+@import "theme/functions";
 @import "config/variables";
-@import "vendors/bootstrap/mixins";
-@import "vendors/bootstrap/variables";
-@import "theme/fluid-font-size";
+@import "mixin/breakpoints";
 
-@import "theme/typografy";
-@import "theme/grid";
-@import "theme/gui";
+@import "theme/reboot";
 @import "theme/layout";
-@import "theme/page";
-@import "theme/widget";
-@import "sprite/sprite";
+@import "theme/grid";
 
-@import "../blocks/**/*";
+@import "../blocks/layout/header/header";
+@import "../blocks/layout/page/page";
+
+@import "../blocks/components/form/form";

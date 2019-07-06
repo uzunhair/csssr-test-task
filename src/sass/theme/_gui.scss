@@ -1,6 +1,6 @@
 // Размер шрифта в пикселях
 @each $font-size in 10, {
-  .fs-#{$font-size} {
+  .font-size_#{$font-size} {
     font-size: #{$font-size}px;
   }
 }
@@ -8,28 +8,6 @@
 //@include media-breakpoint-up(sm) {
 //  @each $font-size in 12, 16 {
 //    .fs-sm-#{$font-size} {
-//      font-size: #{$font-size}px;
-//    }
-//  }
-//}
-//
-//@include media-breakpoint-up(md) {
-//  @each $font-size in 16, 18, 20, 22, 24, 26, 30, 36, 40, 48, 60, 90 {
-//    .fs-md-#{$font-size} {
-//      font-size: #{$font-size}px;
-//    }
-//  }
-//}
-//@include media-breakpoint-up(lg) {
-//  @each $font-size in 18, 60 {
-//    .fs-lg-#{$font-size} {
-//      font-size: #{$font-size}px;
-//    }
-//  }
-//}
-//@include media-breakpoint-up(xl) {
-//  @each $font-size in 24 {
-//    .fs-xl-#{$font-size} {
 //      font-size: #{$font-size}px;
 //    }
 //  }

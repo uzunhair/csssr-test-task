@@ -32,10 +32,10 @@ const path = {
 		theme: {
 			src: "src/sass/theme.scss",
 			watch: [
-				"src/sass/theme.scss",
-				"src/sass/theme/**/*.scss",
+				"src/sass/**/*.scss",
 				"src/blocks/**/*.scss",
-				"src/sass/config/*.scss"
+				"!src/sass/system.scss",
+				"src/sass/vendors/**/*.scss"
 			],
 		},
 		vendors: {

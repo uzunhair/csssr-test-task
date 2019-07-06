@@ -1,18 +1,90 @@
 {
     "fish": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aut eos eum eveniet exercitationem incidunt, inventore, iusto laborum molestiae, mollitia necessitatibus nostrum perspiciatis quod tempora ullam veritatis voluptas. Accusantium aperiam, consectetur cupiditate deleniti ducimus earum facere itaque maxime natus neque nihil odit, officiis quaerat reiciendis repudiandae soluta ullam ut, voluptates. Ab adipisci deserunt exercitationem ipsa iure iusto maxime odio quaerat saepe similique sunt, tempora ullam, voluptate. Dolore molestias neque unde?",
-    "navPages": {
-        "Главная страница": "index.html",
-        "О компании": "about.html",
-        "Каталог": "catalog.html"
-    },
-    "container": {
-        "smUp":     "576px",
-        "smDown":   "575px",
-        "mdUp":     "768px",
-        "mdDown":   "767px",
-        "lgUp":     "992px",
-        "lgDown":   "991px",
-        "xlUp":     "1200px",
-        "xlDown":   "1199px"
+    "skill": {
+        "1": [
+            {
+                "title": "БЭМ/OOCSS",
+                "checked": true
+            },
+            {
+                "title": "Pug (Jade)",
+                "checked": true
+            },
+            {
+                "title": "Stylus/LESS/SASS",
+                "checked": true
+            },
+            {
+                "title": "Работаю с SVG",
+                "checked": false
+            },
+            {
+                "title": "Верстаю семантично",
+                "checked": true
+            },
+            {
+                "title": "Accessibility (A11Y)",
+                "checked": false
+            },
+            {
+                "title": "ES2015/ES2016",
+                "checked": true
+            }
+        ],
+        "2": [
+            {
+                "title": "Gulp/GRUNT",
+                "checked": true
+            },
+            {
+                "title": "Webpack",
+                "checked": false
+            },
+            {
+                "title": "Дружу с WebGL",
+                "checked": false
+            },
+            {
+                "title": "jQuery",
+                "checked": true
+            },
+            {
+                "title": "Знаю/изучаю Angular",
+                "checked": false
+            },
+            {
+                "title": "Знаю/изучаю React",
+                "checked": true
+            },
+            {
+                "title": "Знаю/изучаю Node.js",
+                "checked": false
+            }
+        ],
+        "3": [
+            {
+                "title": "Использую Git,",
+                "checked": true
+            },
+            {
+                "title": "С глазомером всё",
+                "subtitle": "ок",
+                "checked": true
+            },
+            {
+                "title": "Читаю",
+                "linkText": "blog.csssr.ru",
+                "linkUrl": "http://blog.csssr.ru/",
+                "checked": true
+            },
+            {
+                "title": "Я ленивый(-ая)",
+                "checked": false
+            },
+            {
+                "title": "У меня хороший английский",
+                "checked": false
+            }
+        ]
     }
 }

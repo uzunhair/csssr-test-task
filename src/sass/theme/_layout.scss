@@ -3,20 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   background: url("../img/body-bg.png") repeat top center;
-  height: 100%;
+  min-height: 100%;
   font-size: 15px;
-}
-
-.header {
-  padding-top: 62px;
-  padding-bottom: 40px;
-  &-body {
-    display: flex;
-    position: relative;
-  }
-  &-print {
-    position: absolute;
-    top: -22px;
-    right: -62px;
-  }
+  padding-bottom: 80px;
 }
