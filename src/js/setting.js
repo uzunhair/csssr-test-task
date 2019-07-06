@@ -1,10 +1,12 @@
-$(document).ready(function () {
-    $(function () {
-        // Запускаем инициализацию tooltip
-        $('[data-toggle="tooltip"]').tooltip()
-    });
+const textarea = document.querySelector('textarea');
+const initialHeight = 90;
 
-    $(function () {
-        $('[data-toggle="popover"]').popover()
-    })
-});
+const resize = () => {
+    textarea.style.height = `${initialHeight}px`;
+    const height = textarea.scrollHeight;
+    textarea.style.height = `${height + initialHeight}px`;
+};
+
+resize();
+
+textarea.addEventListener('input', resize);

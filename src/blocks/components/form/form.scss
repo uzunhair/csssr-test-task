@@ -37,6 +37,20 @@
       background-color: $input-disabled-background;
       opacity: 1;
     }
+    &_textarea {
+      height: auto;
+      padding-left: 0;
+      padding-right: 0;
+      background-image: url("../img/form__textarea-background.png");
+      background-repeat: repeat-y;
+      background-position: left 24px;
+      line-height: 2;
+      overflow: hidden;
+      resize: none;
+      &:focus {
+        outline: none;
+      }
+    }
   }
 
   &inline {
