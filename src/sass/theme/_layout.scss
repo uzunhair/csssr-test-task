@@ -1,9 +1,11 @@
-.main-wrap {
+.main {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
   background: url("../img/body-bg.png") repeat top center;
   min-height: 100%;
   font-size: 15px;
-  padding-bottom: 80px;
+  &_wrap {
+    padding-bottom: 65px;
+  }
 }

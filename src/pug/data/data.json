@@ -86,5 +86,23 @@
                 "checked": false
             }
         ]
-    }
+    },
+    "aspiration": [
+        {
+            "title": "Верстать",
+            "checked": false
+        },
+        {
+            "title": "Прокачиваться в JS",
+            "checked": true
+        },
+        {
+            "title": "Менеджерство",
+            "checked": false
+        },
+        {
+            "title": "Другое",
+            "checked": false
+        }
+    ]
 }

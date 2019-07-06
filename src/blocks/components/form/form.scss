@@ -56,6 +56,12 @@
       width: auto;
       margin-bottom: 4px;
     }
+    &_width-sm {
+      width: 214px;
+    }
+    &_margin-bottom {
+      margin-bottom: 10px;
+    }
   }
 
   &label {
@@ -66,9 +72,14 @@
     line-height: 1.2;
   }
 
+  &sub {
+    position: relative;
+    top: 2px;
+  }
+
   &fieldset {
-    &_personal-data {
-      margin-bottom: 58px;
+    &_margin-bottom {
+      margin-bottom: 48px;
     }
   }
 
@@ -76,6 +87,7 @@
     font-size: 24px;
     color: $gray-200;
     font-weight: $font-weight-bold;
+    margin-bottom: .25rem;
   }
 
   &checkbox {
@@ -118,18 +130,66 @@
     }
   }
 
+  &radio {
+    position: relative;
+    padding-left: 2rem;
+    &_input {
+      position: absolute;
+      z-index: -1;
+      opacity: 0;
+      &:checked ~ .form__radio_label {
+        &:before {
+          opacity: 1;
+        }
+      }
+    }
+    &_label {
+      position: relative;
+      &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: .5rem;
+        left: -1.5rem;
+        width: 12px;
+        height: 12px;
+        background: url("../img/radio-active.png") no-repeat 100%;
+        opacity: 0;
+        transition: opacity .2s;
+      }
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: -2rem;
+        width: 28px;
+        height: 28px;
+        background: url("../img/radio-main.png") no-repeat top;
+      }
+    }
+  }
+
   &list {
-    display: flex;
-    flex-flow: row wrap;
     margin: 0;
     padding: 0;
     list-style: none;
+    display: flex;
+    flex-flow: row wrap;
     margin-left: -10px;
     margin-right: -10px;
-    &_item {
+    &_padding-top {
+      padding-top: 10px;
+    }
+    &_item-col {
       flex: 0 0 33.3333%;
       padding-left: 10px;
       padding-right: 10px;
+    }
+    &_item-inline {
+      padding-left: 10px;
+      padding-right: 10px;
+      margin-bottom: .5rem;
     }
   }
 }

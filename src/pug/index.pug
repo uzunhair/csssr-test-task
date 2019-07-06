@@ -12,36 +12,36 @@ block content
 		.page__title
 			+img('headline.png', 'page-title-img')
 		form
-			fieldset.form__fieldset_personal-data
-				.form__inline
+			fieldset.form__fieldset_margin-bottom
+				.form__inline.form__inline_margin-bottom
 					label.form__label.form__inline_label(for="form__full-name") Полное ФИО
-					input.form__control.form__inline_control#form__full-name(type="text", value="Иванов Иван Иванович")
+					input.form__control.form__inline_control#form__full-name(type="text", value="Зайнулабидов Узунхайир Ражабдибирович")
 
-				.form__inline
+				.form__inline.form__inline_margin-bottom
 					label.form__label.form__inline_label(for="form__birth-year") Год рождения
-					input.form__control.form__inline_control#form__birth-year(type="text", value="1990")
+					input.form__control.form__inline_control#form__birth-year(type="text", value="1991")
 
-				.form__inline
-					label.form__label.form__inline_label(for="form__birth-year") Место жительства
-					input.form__control.form__inline_control#form__birth-year(type="text", value="г. Иваново, Россия")
+				.form__inline.form__inline_margin-bottom
+					label.form__label.form__inline_label(for="form__adress") Место жительства
+					input.form__control.form__inline_control#form__adress(type="text", value="г. Махачкала, Россия")
 
-				.form__inline
-					label.form__label.form__inline_label(for="form__birth-year") Скайп
-					input.form__control.form__inline_control#form__birth-year(type="text", value="ivanov")
+				.form__inline.form__inline_margin-bottom
+					label.form__label.form__inline_label(for="form__skype") Скайп
+					input.form__control.form__inline_control#form__skype(type="text", value="atidskype")
 
-				.form__inline
-					label.form__label.form__inline_label(for="form__birth-year") Почта
-					input.form__control.form__inline_control#form__birth-year(type="text", value="ivanov@gmail.com")
+				.form__inline.form__inline_margin-bottom
+					label.form__label.form__inline_label(for="form__email") Почта
+					input.form__control.form__inline_control#form__email(type="text", value="uzunhair@yandex.ru")
 
 
-			fieldset.form__fieldset_personal-data
+			fieldset.form__fieldset_margin-bottom
 				legend.form__legend Расскажите о себе чекбоксами
 				p.form__text Отметьте чекбоксами пункты, которые соответствуют вашим скиллам. Кстати, отсутствие опыта не означает, что у вас меньше шансов стать одним из наших товарищей. Это означает, что вы будете получать те задачи, с которыми гарантировано будете справляться.
 
-				ul.form__list
+				ul.form__list.form__list_row.form__list_padding-top
 					-var n = 0
 					each skillItem, index in skill
-						li.form__list_item
+						li.form__list_item-col
 							each item, index in skillItem
 								.form__checkbox
 									if item.checked
@@ -58,3 +58,31 @@ block content
 												a(href=item.linkUrl)=item.linkUrl
 										if item.subtitle
 											span.form__sub=item.subtitle
+
+			fieldset.form__fieldset_margin-bottom
+				legend.form__legend Уровень владения JavaScript
+
+			fieldset.form__fieldset_margin-bottom
+				legend.form__legend Расскажите о себе словами
+				p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
+
+			fieldset.form__fieldset_margin-bottom
+				legend.form__legend Какие у вас планы на будущее?
+				p Этот ответ ни на что не повлияет. Не беда, если в будущем ваши планы поменяются.
+
+				ul.form__list
+					each item, index in aspiration
+						li.form__list_item-inline
+							.form__radio
+								if item.checked
+									input.form__radio_input(type="radio" id="form__radio_" + index checked)
+								else
+									input.form__radio_input(type="radio" id="form__radio_" + index)
+								label.form__label.form__radio_label(for="form__radio_" + index)=item.title
+
+
+			fieldset
+				.form__inline.form__inline_margin-bottom
+					label.form__label.form__inline_label(for="form__data") Дата заполнения
+					input.form__control.form__inline_width-sm#form__data(type="text", value="07.07.2019")
+
