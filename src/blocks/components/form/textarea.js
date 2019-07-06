@@ -1,12 +1,12 @@
-const textarea = document.querySelector('textarea');
-const initialHeight = 60;
+const textarea = document.querySelector('.form__control_textarea');
+const initialHeight = 90;
 
-const resize = () => {
+const textareaResize = () => {
 	textarea.style.height = `${initialHeight}px`;
 	const height = textarea.scrollHeight;
 	textarea.style.height = `${height + initialHeight}px`;
 };
 
-resize();
+textareaResize();
 
 textarea.addEventListener('input', resize);

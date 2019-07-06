@@ -65,7 +65,10 @@ block content
 			fieldset.form__fieldset_margin-bottom
 				legend.form__legend Расскажите о себе словами
 				p Напишите пару предложений, чем вас привлекла наша вакансия и чего вы ожидаете от работы в CSSSR. Кстати, будет здорово, если при нехватке места для текста строки будут добавляться автоматически.
-				textarea.form__control.form__control_textarea
+				textarea.form__control.form__control_textarea Ну-ууу-уу...
+					|
+					| Ээээ...
+
 
 			fieldset.form__fieldset_margin-bottom
 				legend.form__legend Какие у вас планы на будущее?
@@ -76,9 +79,9 @@ block content
 						li.form__list_item-inline
 							.form__radio
 								if item.checked
-									input.form__radio_input(type="radio" id="form__radio_" + index checked)
+									input.form__radio_input(type="radio", name="exampleRadios", id="form__radio_" + index checked)
 								else
-									input.form__radio_input(type="radio" id="form__radio_" + index)
+									input.form__radio_input(type="radio", name="exampleRadios", id="form__radio_" + index)
 								label.form__label.form__radio_label(for="form__radio_" + index)=item.title
 
 

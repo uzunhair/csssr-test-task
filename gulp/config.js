@@ -21,6 +21,7 @@ const path = {
 		},
 		concat: {
 			src: [
+				"src/blocks/**/*.js",
 				"src/js/concat/*.js",
 				"src/js/setting.js"
 			],
