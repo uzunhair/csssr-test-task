@@ -40,3 +40,28 @@ toggle.onclick = function (e) {
 		togglePosition.style.top = `${positionLine}%`;
 	}
 };
+
+window.onresize = () => {
+
+	if (document.documentElement.clientWidth > 768) {
+		let leftPos = togglePosition.style.left;
+		const topPos = togglePosition.style.top;
+		if(topPos > 0) {
+			togglePosition.style.top = 0;
+			togglePosition.style.left = topPos;
+
+		}
+		console.log(leftPos, topPos, 'up')
+	}
+
+	if (document.documentElement.clientWidth < 767) {
+		let leftPos = togglePosition.style.left;
+		const topPos = togglePosition.style.top;
+		if(leftPos > 0) {
+			togglePosition.style.top = leftPos;
+			togglePosition.style.left = 0;
+		}
+		console.log(leftPos, topPos, 'down')
+	}
+
+};
