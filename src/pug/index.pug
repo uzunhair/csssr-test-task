@@ -61,6 +61,21 @@ block content
 
 			fieldset.form__fieldset_margin-bottom
 				legend.form__legend Уровень владения JavaScript
+				.range.range_paddind
+					//-input(type="range" min="1" max="5" id="size" oninput="sizePic()" value="3")
+					//-img(src="img/headline.png" alt="" id="pic")
+					.range__toggle
+						.range__toggle-icon
+					.range__progress-bar
+					.range__status
+						.range__item.range__item_one Не владею
+							.range__line.range__line_one
+						.range__item.range__item_two Использую готовые решения
+							.range__line.range__line_two
+						.range__item.range__item_three Использую готовые решения и умею их переделывать
+							.range__line.range__line_three
+						.range__item.range__item_four Пишу сложный JS с нуля
+							.range__line.range__line_four
 
 			fieldset.form__fieldset_margin-bottom
 				legend.form__legend Расскажите о себе словами
@@ -79,9 +94,9 @@ block content
 						li.form__list_item-inline
 							.form__radio
 								if item.checked
-									input.form__radio_input(type="radio", name="exampleRadios", id="form__radio_" + index checked)
+									input.form__radio_input(type="radio", name="aspirationRadios", id="form__radio_" + index checked)
 								else
-									input.form__radio_input(type="radio", name="exampleRadios", id="form__radio_" + index)
+									input.form__radio_input(type="radio", name="aspirationRadios", id="form__radio_" + index)
 								label.form__label.form__radio_label(for="form__radio_" + index)=item.title
 
 

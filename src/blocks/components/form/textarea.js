@@ -1,5 +1,5 @@
 const textarea = document.querySelector('.form__control_textarea');
-const initialHeight = 90;
+const initialHeight = 50;
 
 const textareaResize = () => {
 	textarea.style.height = `${initialHeight}px`;
@@ -9,4 +9,4 @@ const textareaResize = () => {
 
 textareaResize();
 
-textarea.addEventListener('input', resize);
+textarea.addEventListener('input', textareaResize);

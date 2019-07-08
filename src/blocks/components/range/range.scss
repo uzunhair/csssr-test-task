@@ -1,0 +1,91 @@
+.range_ {
+  &paddind {
+    padding-top: 18px;
+    padding-bottom: 40px;
+  }
+  &_progress-bar {
+    width: 100%;
+    height: 6px;
+    background: url("../img/range__progress-bar.png") repeat-x left center;
+  }
+
+  &_toggle {
+    position: relative;
+    height: 14px;
+    cursor: pointer;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 2;
+    }
+    &-icon {
+      position: absolute;
+      left: 0;
+      width: 18px;
+      height: 14px;
+      transform: translateX(-7px);
+      background: url("../img/range__toggle.png") no-repeat;
+      transition: left .3s;
+      z-index: 0;
+    }
+  }
+
+  &_status {
+    position: relative;
+  }
+
+  &_item {
+    font-size: 13px;
+    font-weight: 700;
+    color: $gray-200;
+    position: absolute;
+    padding-top: 25px;
+    max-width: 170px;
+    cursor: pointer;
+
+    &_one {
+      left: 0;
+    }
+
+    &_two {
+      left: (100%/770) * 150;
+    }
+
+    &_three {
+      left: (100%/770) * 374;
+    }
+
+    &_four {
+      right: 0;
+    }
+  }
+
+  &_line {
+    position: absolute;
+    top: -4px;
+    left: 0;
+    width: 3px;
+    height: 25px;
+    background: url("../img/range__status-item.png") no-repeat;
+
+    &_two {
+      height: 12px;
+
+    }
+
+    &_three {
+      height: 12px;
+
+    }
+
+    &_four {
+      right: 0;
+      left: auto;
+    }
+  }
+}

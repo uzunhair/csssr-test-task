@@ -27,7 +27,10 @@ const path = {
 			],
 		},
 		dist: "dist/js",
-		watch: "src/js/**/*.js"
+		watch: [
+			"src/js/**/*.js",
+			"src/blocks/**/*.js",
+		]
 	},
 	styles: {
 		theme: {
