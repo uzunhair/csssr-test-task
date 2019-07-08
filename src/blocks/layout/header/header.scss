@@ -3,11 +3,19 @@
   padding-bottom: 40px;
   &-body {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
   }
   &-print {
-    position: absolute;
-    top: -22px;
-    right: -62px;
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: -62px;
+      transform: translateY(-5%);
+    }
+    margin-left: 40px;
+    position: relative;
+    transform: translateY(-10%);
+    transition: .2s;
   }
 }

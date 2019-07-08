@@ -1,10 +1,15 @@
 .form__ {
   &control {
+
+    @include media-breakpoint-up(lg) {
+      padding-left: $input-padding-x;
+      padding-right: $input-padding-x;
+    }
     display: block;
     width: 100%;
     height: $input-height;
     border: 0 solid transparent;
-    padding: $input-padding-y $input-padding-x;
+    padding: $input-padding-y 0;
     font-size: 30px;
     font-family: "Courier New", sans-serif;
     font-weight: 400;
@@ -12,19 +17,16 @@
     color: $input-color;
     background: $input-background url("../img/form__bottom_border.png") repeat-x left bottom;
 
-    //@include box-shadow($input-box-shadow);
-    //@include transition($input-transition);
-
-    &::-ms-expand {
-      background-color: transparent;
-      border: 0;
-    }
-
     &:focus {
       color: $input-focus-color;
       background-color: $input-focus-background;
       //border-color: $input-focus-border-color;
       outline: 0;
+    }
+
+    &::-ms-expand {
+      background-color: transparent;
+      border: 0;
     }
 
     // Placeholder
@@ -54,6 +56,13 @@
   }
 
   &inline {
+    @include media-breakpoint-up(lg) {
+      &_control {
+        flex: 1 0 auto;
+        width: auto;
+        margin-bottom: 4px;
+      }
+    }
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
@@ -65,16 +74,19 @@
       margin-bottom: 0;
       margin-right: 18px;
     }
-    &_control {
-      flex: 1 0 auto;
-      width: auto;
-      margin-bottom: 4px;
-    }
     &_width-sm {
-      width: 214px;
+      @include media-breakpoint-up(sm) {
+        width: 214px;
+      }
     }
     &_margin-bottom {
-      margin-bottom: 10px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 10px;
+      }
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -93,7 +105,10 @@
 
   &fieldset {
     &_margin-bottom {
-      margin-bottom: 48px;
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 48px;
+      }
+      margin-bottom: 36px;
     }
   }
 
@@ -196,7 +211,13 @@
       padding-top: 10px;
     }
     &_item-col {
-      flex: 0 0 33.3333%;
+      @include media-breakpoint-up(sm) {
+        flex-basis: 50%;
+      }
+      @include media-breakpoint-up(lg) {
+        flex-basis: 33.3333%;
+      }
+      flex: 0 0 100%;
       padding-left: 10px;
       padding-right: 10px;
     }
