@@ -17,8 +17,8 @@ gulp.task('scripts', function (cb) {
 		.pipe(gulp.dest(path.scripts.dist));
 
 	gulp.src(path.scripts.concat.src)
-		.pipe(gulpif(production, uglify()))
 		.pipe(plumber())
+		//.pipe(gulpif(production, uglify()))
 		.pipe(concat('app.js'))
 		.pipe(gulp.dest(path.scripts.dist));
 	cb();

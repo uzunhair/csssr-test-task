@@ -7,7 +7,7 @@ const togglePosition = document.querySelector(".range__toggle-icon");
 for (i = 0; i < status.length; i++) {
 	status[i].onclick = function () {
 
-		if (document.documentElement.clientWidth > 768) {
+		if (document.documentElement.clientWidth > 767) {
 			const positionParent = parseInt(window.getComputedStyle(this).left);
 			const positionChildren = parseInt(window.getComputedStyle(this.children[0]).left);
 			const toggleContainerWidth = parseInt(document.querySelector('.range__toggle').offsetWidth);
@@ -28,7 +28,7 @@ const toggle = document.querySelector(".range__toggle");
 
 toggle.onclick = function (e) {
 
-	if (document.documentElement.clientWidth > 768) {
+	if (document.documentElement.clientWidth > 767) {
 		const cursorPosition = e.offsetX;
 		const toggleContainerWidth = parseInt(document.querySelector('.range__toggle').offsetWidth);
 		const positionLine = 100 / toggleContainerWidth * cursorPosition;
@@ -41,27 +41,26 @@ toggle.onclick = function (e) {
 	}
 };
 
-window.onresize = () => {
+window.addEventListener('resize', () => {
+	const leftStyle = parseInt(togglePosition.style.left);
+	const topStyle = parseInt(togglePosition.style.top);
 
-	if (document.documentElement.clientWidth > 768) {
-		let leftPos = togglePosition.style.left;
-		const topPos = togglePosition.style.top;
-		if(topPos > 0) {
-			togglePosition.style.top = 0;
-			togglePosition.style.left = topPos;
-
+	if (document.documentElement.clientWidth > 767) {
+		togglePosition.style.top = 0;
+		if(topStyle > 0 && topStyle < 99) {
+			togglePosition.style.left = `${topStyle - 2.5}%`;
+		} else {
+			togglePosition.style.left = `${topStyle}%`;
 		}
-		console.log(leftPos, topPos, 'up')
 	}
 
-	if (document.documentElement.clientWidth < 767) {
-		let leftPos = togglePosition.style.left;
-		const topPos = togglePosition.style.top;
-		if(leftPos > 0) {
-			togglePosition.style.top = leftPos;
-			togglePosition.style.left = 0;
-		}
-		console.log(leftPos, topPos, 'down')
-	}
+	if (document.documentElement.clientWidth < 768) {
+		togglePosition.style.left = 0;
 
-};
+		if(leftStyle > 0 && leftStyle < 99) {
+			togglePosition.style.top = `${leftStyle + 4}%`;
+		} else {
+			togglePosition.style.top = `${leftStyle}%`;
+		}
+	}
+});
